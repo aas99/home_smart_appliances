@@ -1,15 +1,18 @@
-import java.io.*;
+/**
+ * Created by mOh on 03-Apr-17.
+ */
 import java.util.*;
 import java.lang.*;
 
 public class appliance
 {
     private int max_count=100;
-    private String name;
-    private int code;
-    private ArrayList<String> FixList=new ArrayList<>(max_count);
-    private int[] FixCostList=new int[max_count];
-    private int[] threshold=new int[max_count];
+    public String name;
+    public int code;
+    public ArrayList<String> FixList=new ArrayList<>(max_count);
+    public ArrayList<Integer> FixCostList=new ArrayList<>(max_count);
+    public ArrayList<Integer> threshold=new ArrayList<>(max_count);
+    public ArrayList<String> thresholdName=new ArrayList<String>(max_count);
     appliance()
     {
         String FILENAME;
@@ -44,7 +47,15 @@ public class appliance
 
             result = Integer.parseInt(temp);
             System.out.println(result);
-            FixCostList[n]=result;
+            FixCostList.add(n,result);
+            n++;
+            temp=reader.nextLine();
+        }
+        temp=reader.nextLine();
+        n=0;
+        while(temp!="endNameThreshold")
+        {
+            this.thresholdName.add(n,temp);
             n++;
             temp=reader.nextLine();
         }
@@ -54,7 +65,7 @@ public class appliance
         {
             result = Integer.parseInt(temp);
             System.out.println(result);
-            threshold[n]=result;
+            threshold.add(n,result);
             n++;
             temp=reader.nextLine();
             
