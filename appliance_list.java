@@ -1,9 +1,7 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-/**
- * Created by mOh on 11-Apr-17.
- */
+
 public class appliance_list {
     private int max_count = 100;
     private int n = 0;
