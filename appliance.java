@@ -1,6 +1,3 @@
-/**
- * Created by mOh on 03-Apr-17.
- */
 import java.util.*;
 import java.lang.*;
 
